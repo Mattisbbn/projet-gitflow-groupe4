@@ -114,4 +114,37 @@ Les principales tables :
 
 ---
 
+## Légende des branches
 
+### main
+
+Contient le code stable et en production.
+
+---
+### develop
+
+Contient le code en cours de développement ; c’est la base pour intégrer les nouvelles fonctionnalités.
+
+---
+
+### feature/recherche
+
+Ajout de contenu dans le fichier RECHERCHE.md
+
+---
+### feature/SchemaDuWorkflow
+
+Ajout de contenu dans le fichier README.md
+
+---
+
+### feature/presentation_projet
+
+Ajout de contenu dans le fichier README.md
+
+---
+
+### feature/légende-des-branches
+
+
+Ajout de contenu dans le fichier README.md
