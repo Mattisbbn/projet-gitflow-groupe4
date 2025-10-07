@@ -150,8 +150,6 @@ GitHub fournit trois outils complémentaires pour **organiser, suivre et publier
   - éventuellement des **fichiers téléchargeables**.  
 - **Exemple :** `Release v2.0.0`
 
-TEST HOTFIX
-
 ---
 
 ## 🧭 Schéma du flux
