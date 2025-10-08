@@ -169,3 +169,5 @@ GitHub fournit trois outils complémentaires pour **organiser, suivre et publier
 - Les milestones regroupent ces issues vers un objectif commun (souvent une version).
 - Une fois toutes les issues d’une milestone terminées, on crée une release.
 - La release est ensuite documentée avec un changelog et un tag Git.
+
+TEST HOTFIX
