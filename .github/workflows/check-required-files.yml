@@ -1,0 +1,36 @@
+name: Check Required Files
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-required-files:
+    name: Verify Required Files Exist
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for required files
+        run: |
+          missing_files=()
+
+          required_files=("README.md" "changelog.md" "LICENCE" "CONTRIBUTING.md")
+
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              missing_files+=("$file")
+            fi
+          done
+
+          if [ ${#missing_files[@]} -ne 0 ]; then
+            echo "❌ Missing required files:"
+            for f in "${missing_files[@]}"; do
+              echo " - $f"
+            done
+            exit 1
+          else
+            echo "✅ All required files are present."
+          fi
