@@ -114,37 +114,53 @@ Les principales tables :
 
 ---
 
-## Légende des branches
+# 🗂️ Légende des branches
 
-### main
-
-Contient le code stable et en production.
-
----
-### develop
-
-Contient le code en cours de développement ; c’est la base pour intégrer les nouvelles fonctionnalités.
+Ce document décrit la fonction de chaque branche du projet afin de faciliter la compréhension du workflow Git.
 
 ---
 
-### feature/recherche
-
-Ajout de contenu dans le fichier RECHERCHE.md
-
----
-### feature/SchemaDuWorkflow
-
-Ajout de contenu dans le fichier README.md
+## 🌳 main
+Contient le **code stable et en production**.
 
 ---
 
-### feature/presentation_projet
-
-Ajout de contenu dans le fichier README.md
+## 🧩 develop
+Contient le **code en cours de développement** ; c’est la base pour intégrer les **nouvelles fonctionnalités** avant passage en production.
 
 ---
 
-### feature/légende-des-branches
+## ✨ feature/recherche
+Ajout de contenu dans le fichier **RECHERCHE.md**.
 
+---
 
-Ajout de contenu dans le fichier README.md
+## ✨ feature/SchemaDuWorkflow
+Ajout de contenu dans le fichier **README.md**.
+
+---
+
+## ✨ feature/presentation_projet
+Ajout de contenu dans le fichier **README.md**.
+
+---
+
+## 🚀 release/1.0.0
+Branche dédiée à la **préparation de la version 1.0.0** avant mise en production (tests finaux, corrections mineures, documentation).
+
+---
+
+## 🔁 revert-21-hotfix/changerecherchemd
+Branche générée pour **annuler un hotfix** précédent lié à la modification du fichier **RECHERCHE.md**.
+
+---
+
+## 🩹 hotfix/changerecherchemd
+Branche de **correction rapide** concernant des modifications dans le fichier **RECHERCHE.md**.
+
+---
+
+## 🩹 hotfix/update_readme
+Branche de **correction rapide** liée à la mise à jour du fichier **README.md**.
+
+---
