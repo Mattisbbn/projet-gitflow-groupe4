@@ -18,17 +18,18 @@ jobs:
         with:
           script: |
             const commits = context.payload.commits;
-            const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
+            const { owner, repo } = context.repo;
 
             for (const commit of commits) {
               const message = commit.message;
               const regex = /fix(?:es|ed)?\s+#(\d+)/gi;
               let match;
+
               while ((match = regex.exec(message)) !== null) {
                 const issue_number = match[1];
-                await octokit.rest.issues.update({
+                console.log(`→ Fermeture de l'issue #${issue_number}`);
+
+                await github.rest.issues.update({
                   owner,
                   repo,
                   issue_number,
