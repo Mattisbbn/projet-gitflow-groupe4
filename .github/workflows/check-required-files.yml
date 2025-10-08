@@ -17,7 +17,7 @@ jobs:
         run: |
           missing_files=()
 
-          required_files=("README.md" "CHANGELOG.md" "LICENSE" "CONTRIBUTING.md")
+          required_files=("README.md" "changelog.md" "LICENCE" "CONTRIBUTING.md")
 
           for file in "${required_files[@]}"; do
             if [ ! -f "$file" ]; then
