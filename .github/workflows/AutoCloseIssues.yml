@@ -10,7 +10,9 @@ on:
 jobs:
   close-issues:
     runs-on: ubuntu-latest
-
+    permissions:
+      issues: write
+      contents: read
     steps:
       - name: Vérifie les commits pour les mots-clés
         uses: actions/github-script@v7
