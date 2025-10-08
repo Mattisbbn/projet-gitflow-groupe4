@@ -16,7 +16,7 @@ nous avons également consolidé nos connaissances sur le **versionnage** et la 
 
 ## ⚙️ Difficultés rencontrées et solutions
 
-- Nous avons dû **m’habituer à suivre une structure stricte de branches** (Gitflow) au lieu de travailler directement sur la main branch.
+- Nous avons dû **nous habituer à suivre une structure stricte de branches** (Gitflow) au lieu de travailler directement sur la main branch.
 - Pour résoudre cela, nous avons pris le temps de **relire la logique du Gitflow** et de s’assurer que chaque action (commit, merge, pull request) suivait le bon chemin.
 
 ---
