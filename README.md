@@ -164,3 +164,4 @@ Branche de **correction rapide** concernant des modifications dans le fichier **
 Branche de **correction rapide** liée à la mise à jour du fichier **README.md**.
 
 ---
+Other
