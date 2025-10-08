@@ -1,6 +1,6 @@
 # 🧠 RETEX – Retour d’expérience sur Git et GitHub
 
-## 🚀 Ce que j’ai appris
+## 🚀 Ce que nous avons appris
 
 Ce projet nous a permis de **mieux comprendre et appliquer le workflow Gitflow**.  
 Nous avons notamment appris à utiliser efficacement les différentes branches :
