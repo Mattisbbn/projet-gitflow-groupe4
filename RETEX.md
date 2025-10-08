@@ -10,7 +10,7 @@ Nous avons notamment appris à utiliser efficacement les différentes branches :
 - **release/** pour la préparation d’une version stable ;
 - **hotfix/** pour les corrections rapides.
 
-nous avons également consolidé nos connaissances sur le **versionnage** et la gestion des versions (ex. `release/1.0.0`).
+Nous nous sommes également consolidé nos connaissances sur le **versionnage** et la gestion des versions (ex. `release/1.0.0`).
 
 ---
 
