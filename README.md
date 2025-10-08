@@ -69,7 +69,7 @@ Le jeu mêle **combat, exploration, gestion d’inventaire et progression narrat
 - Chaque étape du lore est associée à un boss
 - Exemples de progression :
   - Lvl 1 : Brigand
-  - Lvl 2 : Bras droit du brigand
+  - Lvl 2 : Bras droit du chef des brigands
   - Lvl 3 : Chef des brigands
   - Lvl 4 : Assassin du roi
   - ...
