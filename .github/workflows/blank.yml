@@ -22,7 +22,7 @@ jobs:
 
             for (const commit of commits) {
               const message = commit.message;
-              const regex = /fix(?:es|ed)?\s+#(\d+)/gi;
+              const regex = /fixes(?:es|ed)?\s+#(\d+)/gi;
               let match;
 
               while ((match = regex.exec(message)) !== null) {
