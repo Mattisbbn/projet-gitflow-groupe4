@@ -1,0 +1,60 @@
+name: Auto Close Issues on Commit Keywords
+
+on:
+  push:
+    branches:
+      - '**'  
+    tags-ignore:
+      - '*'
+
+jobs:
+  close-issues:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Vérifie les commits pour les mots-clés
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const keywords = ["fixes", "closes", "resolves"];
+            const branch = context.ref.replace("refs/heads/", "");
+            const commits = context.payload.commits || [];
+
+            for (const commit of commits) {
+              const message = commit.message.toLowerCase();
+              const commitUrl = commit.url;
+              const sha = commit.id.slice(0, 7);
+
+              const issueMatches = message.match(/(?:fixes|closes|resolves)\s+#(\d+)/gi);
+              if (!issueMatches) continue;
+
+              for (const match of issueMatches) {
+                const issueNumber = parseInt(match.match(/#(\d+)/)[1]);
+                
+                const issue = await github.rest.issues.get({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber
+                });
+
+                if (issue.data.pull_request) {
+                  console.log(`⚠️ #${issueNumber} est une PR — ignorée.`);
+                  continue;
+                }
+
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  state: "closed"
+                });
+
+                const body = `🔒 Fermée automatiquement par le commit [${sha}](${commitUrl}) sur la branche **${branch}**.`;
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  body
+                });
+              }
+            }
